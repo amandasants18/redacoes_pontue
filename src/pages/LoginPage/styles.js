@@ -67,6 +67,7 @@ font-weight: 600;
 font-size: 16px;
 max-width: 350px;
 margin-top: 50px;
+
 `;
 
 export const Strong = styled.strong`

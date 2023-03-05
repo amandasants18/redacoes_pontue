@@ -25,6 +25,7 @@ console.log("login",response.data)
 
 const loggedUser = response.data
 const token = response.data.access_token
+console.log(token)
 
 localStorage.setItem('user', JSON.stringify(loggedUser))
 localStorage.setItem('token',token)

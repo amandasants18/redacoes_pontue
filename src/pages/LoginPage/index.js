@@ -1,6 +1,6 @@
 
 import Input from "../../Input"
-import {ChangeEvent, FormEvent, useState, useContext} from "react";
+import {ChangeEvent, FormEvent, useState, useContext, useEffect} from "react";
 import * as C from "./styles";
 import { AuthContext } from "../../contexts/auth";
 const LoginPage = () => {
@@ -8,6 +8,9 @@ const {authenticated,login} = useContext(AuthContext)
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 
+useEffect(()=>{
+  localStorage.clear()
+},[])
   const handleSubmit = (e) =>{
     e.preventDefault()
     console.log("submit", {email, password})
