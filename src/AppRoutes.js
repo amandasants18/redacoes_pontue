@@ -6,7 +6,10 @@ import { useContext } from "react";
 
 const AppRoutes = () => {
   const Private = ({ children }) => {
-    const {authenticated} = useContext(AuthContext)
+    const {authenticated, loading} = useContext(AuthContext)
+    if(loading){
+     return <h1>carregando</h1>
+    }
     if(!authenticated) {
       return <Navigate to = '/login'></Navigate>
     }
