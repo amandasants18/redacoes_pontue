@@ -21,6 +21,11 @@ height: 100vh;
 
 `;
 
+export const ContainerUrl = styled.div`
+display: flex;
+
+`;
+
 export const Content = styled.div`
 gap: 15px;
 display: flex;

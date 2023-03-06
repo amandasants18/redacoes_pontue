@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
-import CreateRedacao from "./pages/CreateRedacao";
+import BuscarRedacao from "./pages/BuscarRedacaoAluno";
+
 import { AuthProvicer, AuthContext } from "./contexts/auth";
 import { useContext } from "react";
-
-
+import BuscarRedacaoId from "./pages/BuscarRedacaoId";
 
 const AppRoutes = () => {
   const Private = ({ children }) => {
@@ -32,16 +32,23 @@ const AppRoutes = () => {
             }
           />
           <Route
-            path="/criar-redacao"
+            path="/buscar"
             element={
               <Private>
-                <CreateRedacao />
+                <BuscarRedacao />
               </Private>
             }
           />
-         
-          
-          
+
+
+          <Route
+            path="/buscar-redacao-id"
+            element={
+              <Private>
+                <BuscarRedacaoId />
+              </Private>
+            }
+          />
         </Routes>
       </AuthProvicer>
     </BrowserRouter>

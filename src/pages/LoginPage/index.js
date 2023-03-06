@@ -1,12 +1,13 @@
 
 import Input from "../../Input"
-import {ChangeEvent, FormEvent, useState, useContext, useEffect} from "react";
+import { useState, useContext, useEffect} from "react";
 import * as C from "./styles";
 import { AuthContext } from "../../contexts/auth";
 const LoginPage = () => {
 const {authenticated,login} = useContext(AuthContext)
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
+const [authenticatedError, setErrorAuthenticated] = useState(false)
 
 useEffect(()=>{
   localStorage.clear()
@@ -15,6 +16,10 @@ useEffect(()=>{
     e.preventDefault()
     console.log("submit", {email, password})
     login(email, password)
+   console.log(authenticated)
+   if(authenticated) {
+    setErrorAuthenticated(true)
+   }
   }
 
 
@@ -51,6 +56,8 @@ useEffect(()=>{
         value={password}  
       ></Input>
      
+     
+
       <C.Button type="submit">
         Entrar
       </C.Button>

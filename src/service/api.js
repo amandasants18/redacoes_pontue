@@ -11,12 +11,13 @@ export const createAccessLogin = async (email, password) => {
 
 
 
-export const getRedacaoByIdAluno = () =>{
-    return api.get('/index/aluno/ef0c1f20-664a-11eb-9dbc-91c7d6b63ffc')
+export const getRedacaoByIdAluno = (id_aluno) =>{
+    
+    return api.get('/index/aluno/' + id_aluno)
 }
 
 
-export const getRedacaoById = () =>{
-    return api.get('/redacao/1edbb648-8106-6e8a-98c1-002248321348')
+export const getRedacaoById = (id_redacao) =>{
+    return api.get('/redacao/' + id_redacao)
 }
 
