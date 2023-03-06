@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
 export const Input = styled.input`
-outline: none;
-padding: 16px 20px;
+background: transparent;
 width: 50%;
-align-content: center;
-border-radius: 5px;
-font-size: 16px;
-background-color: #F0F2F5;
-border: none;
+outline-width: 0;
+color: black;
+border: radius;
+font-size: 17px;
+margin-left: 10px;
+margin-right: 10px;
+align
 `;
+

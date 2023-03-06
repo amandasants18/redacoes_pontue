@@ -6,7 +6,7 @@ export const StyledForm = styled.form`
   border-radius: 5px;
 `
 export const StyledTitle = styled.h1`
-  font-size: 1.5em;
+  font-size: 2rem;
   text-align: center;
   color: palevioletred;
 `;
